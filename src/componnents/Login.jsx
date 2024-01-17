@@ -26,7 +26,7 @@ function Login() {
         const email = formData.get('email');
         // Vérifier si l'utilisateur existe dans le localStorage
         const userExists = tableUsers.some(user => user.nom === fullName && user.motDePass === password);
-// ============ commentaire gestion des erreurs
+// ============ commentaire gestion des erreurs ==================
         if (fullName === '' || password === '' || email === '') {
             toast.error('Veuillez renseigner tous les champs.', {theme: "colored"});
         } else if (userExists) {
@@ -60,9 +60,9 @@ function Login() {
     }
 
     return (
-        <>
+        <div>
             <ToastContainer position="top-center"></ToastContainer>
-            <div style={{margin: 'auto'}}>
+            <div className="divimg" style={{margin: 'auto'}}>
             <img src={logo} className="App-logo" alt="logo" />
             </div>
             <form onSubmit={connect}>
@@ -72,9 +72,9 @@ function Login() {
                 <input type="password" placeholder="Mot de passe" name="password" value={password} onChange={handlePasswordChange} />
                 <label>Email</label>
                 <input type="email" placeholder="Mail" name="email" value={email} onChange={handlMailChange} />
-                <input className="btnC" type="submit" value={'Connexion'} />
+                <input className="btnC" type="submit" value={'enregistrer'} />
             </form>
-        </>
+        </div>
     );
 }
 

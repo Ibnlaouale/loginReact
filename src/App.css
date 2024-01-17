@@ -1,5 +1,6 @@
-.App {
-  text-align: center;
+.divimg{
+  width: -moz-fit-content;
+  width: fit-content;;
 }
 
 body{
@@ -60,6 +61,7 @@ label {
   font-size: 20px;
   text-align: justify;
   color: #61dafb;
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
   font-style: italic;
