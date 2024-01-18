@@ -26,7 +26,7 @@ function Login() {
         const password = formData.get('password');
         const email = formData.get('email');
         // Vérifier si l'utilisateur existe dans le localStorage
-        const userExists = tableUsers.some(user => user.nom === fullName && user.motDePass === password);
+        const userExists = tableUsers.some(user => user.nom === fullName && user.mail === email);
         // ============ commentaire gestion des erreurs ==================
         if (fullName === '' || password === '' || email === '') {
             toast.error('Veuillez renseigner tous les champs.', { theme: "colored" });
@@ -67,16 +67,13 @@ function Login() {
                 <img src={logo} className="App-logo" alt="logo" />
             </div>
             <form onSubmit={connect} >
-
-                    <label for="fullName" class="form-label">Nom:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nom" name="fullName" value={fullName} onChange={handleFullNameChange} />
-                    <label for="fullName" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mail" name="email" value={email} onChange={handlMailChange} />
-                    <label for="fullName" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Mot de passe" name="password" value={password} onChange={handlePasswordChange} />
-                    <input type="submit" class="form-control" id="exampleFormControlInput1" value={'Enregistrer'} className="mt-3 w-100 btnC btn text-white fw-bold fs-5"/>
-
-
+                <label for="fullName" class="form-label">Nom:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nom" name="fullName" value={fullName} onChange={handleFullNameChange} />
+                <label for="fullName" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mail" name="email" value={email} onChange={handlMailChange} />
+                <label for="fullName" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Mot de passe" name="password" value={password} onChange={handlePasswordChange} />
+                <input type="submit" class="form-control" id="exampleFormControlInput1" value={'Enregistrer'} className="mt-3 w-100 btnC btn text-white fw-bold fs-5" />
             </form>
         </div>
     );
