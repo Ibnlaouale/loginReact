@@ -49,14 +49,6 @@ body{
 }
 
 
-
-form {
-  
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 label {
   font-size: 20px;
   text-align: justify;
@@ -67,26 +59,9 @@ label {
   font-style: italic;
 }
 
-input {
-  padding: 2%;
-  margin: 10px 0px;
-  border: 1px solid #61dafb;
-  border-radius: 5px;
-  outline: none;
-  color: gray;
-  font-size: 20px;
-  font-style: italic;
-}
-
 .btnC {
-  color: #61dafb;
   font-style: italic;
-  background-color: white;
+  background-color: #61dafb !important;
   font-weight: bold;
   
-}
-.btnC:hover{
-  background-color: #61dafb;
-  color: white;
-  cursor: pointer;
 }
